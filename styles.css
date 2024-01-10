@@ -191,3 +191,15 @@ body {
     display: block;
     margin-bottom: 10px;
 }
+
+
+/* CSS to center the images within project cards */
+
+.project-card {
+    text-align: center;
+}
+
+.project-image {
+    display: block;
+    margin: 0 auto;
+}
