@@ -2,13 +2,18 @@
 
 body,
 h1,
-h2,
+h2 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Code', monospace;
+}
+
 p,
 .project-description {
     margin: 0;
     padding: 0;
     font-family: 'Fira Code', monospace;
-    /* Use a monospace font for code-like sections */
+    font-size: medium;
 }
 
 
