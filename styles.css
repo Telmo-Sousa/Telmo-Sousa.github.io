@@ -179,18 +179,8 @@ body {
 
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.project {
-    border: 1px solid #ccc;
-    padding: 10px;
-}
-
-.project img {
-    display: block;
-    margin-bottom: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(25vh, 1fr));
+    gap: 1vh;
 }
 
 
@@ -203,4 +193,22 @@ body {
 .project-image {
     display: block;
     margin: 0 auto;
+}
+
+
+/* Hide the container initially */
+
+.hidden-text-container {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    color: var(--purple);
+    /* Add this line to set the text color */
+}
+
+
+/* Reveal the container on hover */
+
+.page:hover .hidden-text-container,
+.page:active .hidden-text-container {
+    opacity: 1;
 }
