@@ -72,4 +72,11 @@ $(document).ready(function() {
             $('.profile-image, h1, .bio').css('opacity', 1);
         }
     });
+    $('.page').on('touchstart', function() {
+        $(this).find('.hidden-text-container').css('opacity', 1);
+    });
+
+    $('.page').on('touchend', function() {
+        $(this).find('.hidden-text-container').css('opacity', 0);
+    });
 });
