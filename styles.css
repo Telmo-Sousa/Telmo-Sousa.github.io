@@ -179,8 +179,9 @@ body {
 
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(25vh, 1fr));
-    gap: 1vh;
+    /* Anything below 19em will mess things up */
+    grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+    gap: 1em;
 }
 
 
