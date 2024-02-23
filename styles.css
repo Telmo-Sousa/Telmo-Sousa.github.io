@@ -180,8 +180,18 @@ body {
 .projects {
     display: grid;
     /* Anything below 19em will mess things up */
-    grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
     gap: 1em;
+}
+
+
+/* apply side by side layout for screens wider than 600px */
+
+@media (min-width: 200px) {
+    .projects {
+        display: grid;
+        gap: 1em;
+    }
 }
 
 
