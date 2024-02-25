@@ -3,7 +3,7 @@ $(document).ready(function() {
     var secondImage = 'media/pfp.png';
     var currentImage = firstImage;
 
-    var firstBio = 'Junior Developer';
+    var firstBio = 'Developer';
     var secondBio = 'Nice easter egg, huh!?';
     var currentBio = firstBio;
 
@@ -11,8 +11,8 @@ $(document).ready(function() {
     var secondUsername = 'telmo-sousa';
     var currentUsername = firstUsername;
 
-    var fadeOutTriggered = false; // Flag to track if fade-out has been triggered
-    var isDarkMode = true; // Flag to track current mode
+    var fadeOutTriggered = false;
+    var isDarkMode = true;
 
     function toggleMode() {
         if (isDarkMode) {
@@ -24,7 +24,9 @@ $(document).ready(function() {
     }
 
     $('.profile-image').click(function() {
-        toggleMode(); // Toggle mode when clicking the profile image
+        setTimeout(() => {
+            toggleMode();
+        }, 500); // this is a 500ms delay
 
         $(this).addClass('glitch-effect');
         setTimeout(() => {
