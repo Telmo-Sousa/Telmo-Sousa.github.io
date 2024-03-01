@@ -1,18 +1,11 @@
-/* Resetting default margin and padding for elements */
-
 body,
 h1,
 h2,
-p,
-.project-description {
+p {
     margin: 0;
     padding: 0;
     font-family: 'Fira Code', monospace;
-    /* Use a monospace font for code-like sections */
 }
-
-
-/* Dracula color scheme */
 
 :root {
     --background: #282a36;
@@ -40,9 +33,6 @@ p,
     --yellow: #fabd2f;
 }
 
-
-/* Main section styles */
-
 body {
     background-color: var(--background);
     color: var(--foreground);
@@ -57,7 +47,7 @@ body {
 }
 
 .custom-class {
-    font-size: medium;
+    font-size: large;
     font-weight: bold;
 }
 
@@ -89,9 +79,6 @@ h1 {
     color: var(--foreground);
 }
 
-
-/* Other pages styles */
-
 .other-pages {
     display: flex;
     flex-direction: column;
@@ -107,9 +94,6 @@ h1 {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-
-/* Scrollbar style */
-
 body::-webkit-scrollbar {
     width: 8px;
 }
@@ -119,16 +103,10 @@ body::-webkit-scrollbar-thumb {
     border-radius: 4px;
 }
 
-
-/* Hide scrollbar in Firefox */
-
 body {
     scrollbar-width: thin;
     scrollbar-color: var(--comment) transparent;
 }
-
-
-/* CSS for the glitch effect */
 
 @keyframes glitch {
     0% {
@@ -152,17 +130,11 @@ body {
     animation: glitch 0.5s infinite;
 }
 
-
-/* Mosaic layout styles */
-
 .projects {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
     gap: 1em;
 }
-
-
-/* apply side by side layout for screens wider than 600px */
 
 @media (min-width: 200px) {
     .projects {
@@ -170,9 +142,6 @@ body {
         gap: 1em;
     }
 }
-
-
-/* CSS to center the images within project cards */
 
 .project-card {
     text-align: center;
@@ -183,26 +152,16 @@ body {
     margin: 0 auto;
 }
 
-
-/* Hide the container initially */
-
 .hidden-text-container {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     color: var(--purple);
-    /* Add this line to set the text color */
 }
-
-
-/* Reveal the container on hover */
 
 .page:hover .hidden-text-container,
 .page:active .hidden-text-container {
     opacity: 1;
 }
-
-
-/* Matrix Rain styles */
 
 .matrix-rain {
     position: fixed;
@@ -216,11 +175,10 @@ body {
 }
 
 .character {
-    /* color: #0F0; */
     color: var(--green);
     position: absolute;
     font-family: 'Courier New', monospace;
-    font-size: 18px;
+    font-size: 1rem;
     white-space: nowrap;
     opacity: 0;
     animation: fall linear infinite;
