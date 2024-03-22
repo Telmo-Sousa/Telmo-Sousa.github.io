@@ -26,7 +26,7 @@ $(document).ready(function() {
     $('.profile-image').click(function() {
         setTimeout(() => {
             toggleMode();
-        }, 500); // this is a 500ms delay
+        }, 500);
 
         $(this).addClass('glitch-effect');
         setTimeout(() => {
@@ -55,25 +55,24 @@ $(document).ready(function() {
         }, 300);
     });
 
-    // Adding the scroll-based fade-out effect at 1/5th of the page
     $(window).scroll(function() {
         var windowHeight = $(window).height();
-        var documentHeight = $(document).height();
-        var fifthOfPage = documentHeight / 5; // Calculate 1/5th of the page
+        var mainSectionHeight = $('.main-section').outerHeight();
         var currentScroll = $(window).scrollTop();
 
-        var fadeOutStart = fifthOfPage - windowHeight / 2; // Set fade-out start at 1/5th of the page
+        var fadeOutStart = $('.main-section').offset().top + (mainSectionHeight / 2) - (windowHeight / 2);
 
         if (currentScroll > fadeOutStart) {
-            var opacity = 1 - ((currentScroll - fadeOutStart) / (fifthOfPage - fadeOutStart));
+            var opacity = 1 - ((currentScroll - fadeOutStart) / (mainSectionHeight / 2));
             if (opacity >= 0) {
                 $('.profile-image, h1, .bio').css('opacity', opacity);
-                fadeOutTriggered = true; // Set the flag once fade-out is triggered
+                fadeOutTriggered = true;
             }
         } else if (!fadeOutTriggered) {
             $('.profile-image, h1, .bio').css('opacity', 1);
         }
     });
+
     $('.page').on('touchstart', function() {
         $(this).find('.hidden-text-container').css('opacity', 1);
     });
