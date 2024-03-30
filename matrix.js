@@ -16,8 +16,14 @@ $(document).ready(function() {
         matrixContainer.append(character);
     }
 
+    setInterval(function() {
+        matrixContainer.find('.character').each(function() {
+            $(this).text(getRandomCharacter());
+        });
+    }, 100);
+
     function getRandomCharacter() {
-        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+[]{}|;:,.<>?`~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZカタカナコンソールログポジションプロセス';
         return characters[Math.floor(Math.random() * characters.length)];
     }
 });
