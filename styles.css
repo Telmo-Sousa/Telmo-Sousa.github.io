@@ -219,3 +219,20 @@ body {
         opacity: 1;
     }
 } */
+
+.screen {
+    box-shadow: 0 0 5vmin 0.5vmin #000 inset;
+    box-sizing: border-box;
+  }
+  
+  p:last-child:after {
+    animation: blink 1s infinite;
+    content: "_";
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  
