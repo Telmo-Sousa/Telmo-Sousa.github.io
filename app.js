@@ -28,6 +28,8 @@ $(document).ready(function() {
             toggleMode();
         }, 500);
 
+        $('#toggleColorButton').click();
+
         $(this).addClass('glitch-effect');
         setTimeout(() => {
             $(this).removeClass('glitch-effect');
@@ -80,4 +82,5 @@ $(document).ready(function() {
     $('.page').on('touchend', function() {
         $(this).find('.hidden-text-container').css('opacity', 0);
     });
+    
 });
