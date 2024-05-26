@@ -96,6 +96,12 @@ h1 {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
+#footer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
 body::-webkit-scrollbar {
     width: 8px;
 }
