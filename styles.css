@@ -149,6 +149,17 @@ body {
         display: grid;
         gap: 1em;
     }
+
+    .load-more {
+        font-size: 12px;
+        background: none;
+        border: 1px solid var(--purple);
+        color: var(--purple);
+        padding: 5px 10px;
+        cursor: pointer;
+        display: block;
+        margin: 20px auto;
+    }
 }
 
 .project-card {
@@ -426,18 +437,4 @@ body {
 
 .specific-page #pauseMenu.active {
     display: block;
-}
-
-@media (min-width: 768px) {
-
-    .load-more {
-        font-size: 12px;
-        background: none;
-        border: 1px solid var(--purple);
-        color: var(--purple);
-        padding: 5px 10px;
-        cursor: pointer;
-        display: block;
-        margin: 20px auto;
-    }
 }
