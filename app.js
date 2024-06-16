@@ -1,6 +1,6 @@
 $(document).ready(function() {
-    var firstImage = 'media/circlepfp.webp';
-    var secondImage = 'media/pfp.webp';
+    var firstImage = 'media/pfp.png';
+    var secondImage = 'media/pfp2.png';
     var currentImage = firstImage;
 
     var firstBio = 'Developer';
