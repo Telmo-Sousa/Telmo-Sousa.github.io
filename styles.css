@@ -342,6 +342,7 @@ footer ul li a:hover {
 
 footer .container ul li a svg {
     fill: white;
+}
 
 footer .container ul li a svg:hover{
     fill: #a29bfe;
