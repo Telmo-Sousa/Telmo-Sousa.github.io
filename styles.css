@@ -1,248 +1,149 @@
-body,
-h1,
-h2,
-p,
-.project-description {
+/* Base styles */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Fira Code', monospace;
-}
-
-:root {
-    --background: #282a36;
-    --foreground: #f8f8f2;
-    --comment: #6272a4;
-    --cyan: #8be9fd;
-    --green: #50fa7b;
-    --orange: #ffb86c;
-    --pink: #ff79c6;
-    --purple: #bd93f9;
-    --red: #ff5555;
-    --yellow: #f1fa8c;
-}
-
-.light-mode {
-    --background: #282828;
-    --foreground: #ebdbb2;
-    --comment: #928374;
-    --cyan: #83a598;
-    --green: #b8bb26;
-    --orange: #fe8019;
-    --pink: #d3869b;
-    --purple: #b16286;
-    --red: #fb4934;
-    --yellow: #fabd2f;
 }
 
 body {
-    background-color: var(--background);
-    color: var(--foreground);
-}
-
-.custom-link {
-    color: var(--pink);
-}
-
-.custom-link:hover {
-    color: var(--orange);
-}
-
-.custom-class {
-    font-size: medium;
-    font-weight: bold;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to top, #1a1a2e, #0c0c0c);
+    background: #1a1a2e;
+    color: #ffffff;
+    overflow-x: hidden;
 }
 
 .main-section {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     height: 100vh;
 }
 
-.profile {
-    text-align: center;
+
+.ocean {
+    /* height: 5%; */
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    bottom: 0; 
+    left: 0;
+    background: #1a1a2e;
+    z-index: -1;
 }
 
-.profile-image {
-    border-radius: 50%;
-    width: 12em;
-    height: 12em;
-    object-fit: cover;
-    margin-bottom: 1em;
+.wave {
+    background: url('media/wave.svg') repeat-x;
+    position: absolute;
+    top: -198px;
+    width: 6400px;
+    height: 198px;
+    animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+    transform: translate3d(0, 0, 0);
 }
 
-h1 {
-    color: var(--purple);
-}
-
-.bio {
-    color: var(--foreground);
-}
-
-.other-pages {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    padding-bottom: 0px;
-}
-
-.page {
-    padding: 20px;
-    margin-bottom: 20px;
-    background-color: var(--foreground);
-    color: var(--background);
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-#footer {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-
-body::-webkit-scrollbar {
-    width: 8px;
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color: var(--comment);
-    border-radius: 4px;
-}
-
-body {
-    scrollbar-width: thin;
-    scrollbar-color: var(--comment) transparent;
-}
-
-@keyframes glitch {
-    0% {
-        transform: translate(0);
-    }
-    25% {
-        transform: translate(-5px, 5px);
-    }
-    50% {
-        transform: translate(5px, -5px);
-    }
-    75% {
-        transform: translate(-5px, 5px);
-    }
-    100% {
-        transform: translate(0);
-    }
-}
-
-.glitch-effect {
-    animation: glitch 0.5s infinite;
-}
-
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
-    gap: 1em;
-}
-
-@media (min-width: 200px) {
-    .projects {
-        display: grid;
-        gap: 1em;
-    }
-
-    .load-more {
-        font-size: 12px;
-        background: none;
-        border: 1px solid var(--purple);
-        color: var(--purple);
-        padding: 5px 10px;
-        cursor: pointer;
-        display: block;
-        margin: 20px auto;
-    }
-}
-
-.project-card {
-    text-align: center;
-}
-
-.project-image {
-    display: block;
-    margin: 0 auto;
-}
-
-.hidden-text-container {
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    color: var(--purple);
-    /* Add this line to set the text color */
-}
-
-.page:hover .hidden-text-container,
-.page:active .hidden-text-container {
+.wave:nth-of-type(2) {
+    top: -175px;
+    animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
     opacity: 1;
 }
 
-.matrix-rain {
-    position: fixed;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    overflow: hidden;
-}
-
-.character {
-    /* color: #0F0; */
-    color: var(--green);
-    position: absolute;
-    font-family: 'Courier New', monospace;
-    font-size: 18px;
-    white-space: nowrap;
-    opacity: 0;
-    animation: fall linear infinite;
-}
-
-@keyframes fall {
+@keyframes wave {
     0% {
-        transform: translateY(-10vh) translateX(0);
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
+        margin-left: 0;
     }
     100% {
-        transform: translateY(110vh) translateX(0);
-        opacity: 0;
+        margin-left: -1600px;
     }
 }
 
-
-/* Like this they do not have a smooth opacity effect */
-
-
-/* @keyframes fall {
-    0% {
-        transform: translateY(-10vh) translateX(0);
-        opacity: 1;
+@keyframes swell {
+    0%, 100% {
+        transform: translate3d(0, -25px, 0);
     }
     50% {
-        opacity: 1;
+        transform: translate3d(0, 5px, 0);
+    }
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.intro {
+    text-align: left;
+    padding: 3rem 0;
+    position: relative;
+}
+
+.intro img {
+    width: 15rem; /* Set the width of the image */
+    float: right;
+    margin-top: 3rem;
+}
+
+.intro img:hover {
+    content: url('media/purple.png'); /* Change on hover */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 7.5rem;
+    float: right;
+}
+
+.social-icons a {
+    margin-left: 1rem;
+}
+
+.social-icons svg {
+    width: 5rem; /* Adjust size as needed */
+    height: 5rem;
+    fill: #ffffff; /* Adjust color as needed */
+}
+
+.social-icons svg:hover {
+    fill: #a29bfe; /* Adjust color as needed */
+}
+
+.intro h2 {
+    font-size: 6rem;
+    overflow: hidden; /* Ensure text doesn't overflow during animation */
+    white-space: nowrap; /* Prevent wrapping */
+    margin: 0 auto;
+}
+
+.intro .highlight {
+    font-size: 5.5rem;
+    background: linear-gradient(90deg, #a29bfe, #6c5ce7, #a29bfe); /* Define your gradient colors here */
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* Define the standard property for compatibility */
+    animation: gradientAnimation 5s ease infinite; /* Adjust the duration and timing function as needed */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
     }
     100% {
-        transform: translateY(110vh) translateX(0);
-        opacity: 1;
+        background-position: 0% 50%;
     }
-} */
+}
 
-.screen {
-    box-shadow: 0 0 5vmin 0.5vmin #000 inset;
-    box-sizing: border-box;
-  }
-  
-  .bio:last-child:after {
+.intro p {
+    font-size: 3rem;
+}
+
+.intro p:last-child:after {
     animation: blink 1s infinite;
     content: "_";
   }
@@ -252,189 +153,198 @@ body {
       opacity: 0;
     }
   }
-  
-  .terminal-container {
+
+/* .intro .highlight {
+    color: #a29bfe;
+} */
+
+.featured-posts, .popular-tags, .posts, .newsletter {
+    margin: 50px 0;
+}
+
+.posts-grid {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.posts-grid > * {
+    flex: 0 0 calc((100% / 4) - 1rem);
     box-sizing: border-box;
 }
 
-.terminal {
-    background-color: var(--background);
-    color: var(--foreground);
-    border: 2px solid var(--comment);
-    border-radius: 5px;
-    width: 100%;
-    height: 600px;
-    overflow: hidden;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column;
+/* Keeping the rest of your styles as is */
+.post {
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%; /* Changed to 100% to make it responsive */
+    position: relative;
 }
 
-.output {
-    flex-grow: 1;
-}
-
-.input-line {
-    display: flex;
-    align-items: center;
-}
-
-.prompt {
-    margin-right: 10px;
-    color: var(--green);
-}
-
-.input-field {
-    flex-grow: 1;
+.language-tag {
+    font-size: 12px; /* Adjust the font size as needed */
     background: none;
-    border: none;
-    outline: none;
-    color: var(--foreground);
-    font-family: 'Fira Code', monospace;
-    font-size: 1em;
+    border: 1px solid #a29bfe;
+    color: #a29bfe;
+    padding: 5px 10px;
 }
 
-.input-field::placeholder {
-    color: var(--comment);
-}
-
-@media (max-width: 600px) {
-    .terminal {
-        height: 250px;
-    }
-}
-
-.output div.welcome-message {
-    color: var(--purple);
-}
-
-.link {
-    color: inherit; 
-    text-decoration: none; 
-    cursor: pointer;
-}
-
-.link:hover {
-    color: var(--cyan);
-}
-
-.error {
-    color: var(--red);
-}
-
-#gameCanvas {
-    display: block;
-    margin: 0 auto;
-    border: 1px solid var(--comment);
-    border-radius: 5px;
+.post img {
     width: 100%;
+    border-radius: 10px;
+    display: block; /* Ensures the image behaves as a block element */
+    margin: 0 auto; /* Centers the image horizontally */
 }
 
-.specific-page #toggleColorButton {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 16px;
-    padding: 10px;
-    background-color: var(--comment);
-    color: var(--background);
-    border: none;
-    cursor: default;
-    display: block;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.specific-page body,
-.specific-page html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: hidden;
-    background-color: var(--background);
-}
-
-.specific-page #gameContainer {
+.img-container {
     position: relative;
     width: 100%;
-    height: 100%;
+    padding-top: 75%; /* Adjust this percentage based on your desired aspect ratio (4:3 aspect ratio in this case) */
+    overflow: hidden;
+    border-radius: 10px;
 }
 
-.specific-page canvas {
-    display: block;
-    background-color: var(--background);
-}
-
-.specific-page #startScreen,
-.specific-page #loseScreen {
+/* Styles for images inside the container */
+.img-container img {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    border-radius: 10px;
+    display: block; /* Ensures the image behaves as a block element */
+    margin: 0 auto; /* Centers the image horizontally */
+}
+
+.post h4 {
+    font-size: 18px;
+}
+
+.post p {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.post small {
+    color: #a29bfe;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+footer {
+    padding: 10px 0;
     text-align: center;
-    color: var(--foreground);
 }
 
-.specific-page #startScreen.active,
-.specific-page #loseScreen.active {
-    display: block;
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-.specific-page button {
-    padding: 10px 20px;
-    font-size: 20px;
-    background-color: var(--purple);
-    color: var(--foreground);
-    border: none;
-    cursor: pointer;
+footer ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-.specific-page button:hover {
-    background-color: var(--cyan);
+footer ul li a:hover {
+    color: #a29bfe;
 }
 
-.specific-page #scoreBoard {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 24px;
-    color: var(--foreground);
-    display: none; /* Hide the scoreboard initially */
+@media (max-width: 1000px) {
+
+    .posts-grid > * {
+        flex: 0 0 calc((100% / 3) - 1rem);
+        box-sizing: border-box;
+    }
+
+    .intro img {
+        width: 5rem; /* Make the image take full width of its container */
+        float: none; /* Remove the float */
+        margin-bottom: 2rem;
+        margin-top: 0rem;
+        display: block;
+    }
+
 }
 
-.specific-page #scoreBoard.active {
-    display: block; /* Show the scoreboard when the game starts */
+@media (max-width: 768px) {
+
+    .main-section {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .intro {
+        /* align-content: center;
+        text-align: center; */
+    }
+
+    .intro h2 {
+        font-size: 3rem;
+        clear: both;
+    }
+
+    .intro .highlight {
+        font-size: 2.5rem;
+    }
+
+    .intro p {
+        font-size: 1.5rem;
+    }
+
+    .intro img {
+        width: 5rem; /* Make the image take full width of its container */
+        float: none; /* Remove the float */
+        margin-bottom: 2rem;
+        margin-top: 0rem;
+        display: block;
+    }
+
+    .intro img:hover {
+        content: url(media/purple.png);
+    }
+
+    .posts-grid {
+        flex-direction: column;
+    }
+
+    .post {
+        width: 100%;
+    }
+
+    .load-more {
+        font-size: 12px;
+        background: none;
+        border: 1px solid #a29bfe;
+        color: #a29bfe;
+        padding: 5px 10px;
+        cursor: pointer;
+        display: block;
+        margin: 20px auto;
+    }
+
+    .load-more.desktop {
+        display: none; /* Hide on desktop */
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
 }
 
-.specific-page #fpsCounter {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    color: var(--foreground);
-    display: none; /* Hide the FPS counter initially */
+footer .container ul li a svg {
+    fill: white; /* Set the fill color to white */
 }
 
-.specific-page #fpsCounter.active {
-    display: block; /* Show the FPS counter when the game starts */
-}
-
-.specific-page #pauseMenu {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: var(--foreground);
-    display: none;
-}
-
-.specific-page #pauseMenu.active {
-    display: block;
+footer .container ul li a svg:hover{
+    fill: #a29bfe; /* Set the fill color to white */
 }
