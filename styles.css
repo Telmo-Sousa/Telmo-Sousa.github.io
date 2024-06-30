@@ -222,7 +222,13 @@ body {
 .post p {
     font-size: 14px;
     margin: 10px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
 
 .post small {
     color: #a29bfe;
@@ -317,6 +323,16 @@ footer ul li a:hover {
 
     .post {
         width: 100%;
+    }
+
+    .post p {
+        font-size: 14px;
+        margin: 10px 0;
+        display: -webkit-box;
+        -webkit-line-clamp: 15; /* Number of lines to show */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .load-more {
