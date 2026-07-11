@@ -1,112 +1,181 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-gray-900 text-gray-100">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Tech enthusiast in Viseu focused on Unix systems, Rust development, and scalable automation.">
-  <title>💻 Telmo Sousa</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>telmo_sousa — Unix systems, Rust, automation</title>
+<meta name="description" content="Telmo Sousa — tech enthusiast in Viseu focused on Unix systems, Rust development, and scalable automation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-<body class="font-mono">
+<body>
 
-  <header class="p-6 border-b border-gray-700">
-    <h1 class="text-3xl font-bold text-green-400">~/telmo_sousa</h1>
-    <p class="text-gray-400">Systems • Development • Innovation</p>
-  </header>
+<div class="crt-overlay" aria-hidden="true"></div>
 
-  <section class="p-6">
-    <h2 class="text-2xl text-green-300 mb-2"># about-me</h2>
-    <p class="text-gray-300">Tech enthusiast with a focus on Unix systems, Rust development, and hands-on experimentation. I design scalable, automated setups and enjoy solving problems across web, game, and system layers. Locally in Viseu, globally in control.</p>
+<header class="term-window">
+  <div class="term-titlebar">
+    <div class="term-tabs">
+      <span class="tab active">~/telmo_sousa</span>
+    </div>
+    <div class="term-meta">
+      <span class="meta-item" id="uptime">uptime 0s</span>
+    </div>
+  </div>
+</header>
+
+<main class="term-body">
+
+  <!-- HERO -->
+  <section class="block hero" id="top">
+    <p class="cmdline"><span class="prompt">telmo@viseu</span><span class="colon">:</span><span class="path">~</span><span class="dollar">$</span> whoami</p>
+    <h1 class="output-name">telmo_sousa</h1>
+    <p class="cmdline"><span class="prompt">telmo@viseu</span><span class="colon">:</span><span class="path">~</span><span class="dollar">$</span> cat status.txt</p>
+    <p class="output-status">Tech enthusiast in Viseu, Portugal — Unix systems, Rust development, and scalable automation. Locally in Viseu, globally in control.</p>
+    <nav class="quicknav" aria-label="Section shortcuts">
+      <a href="#about">about</a>
+      <a href="#skills">skills</a>
+      <a href="#projects">projects</a>
+      <a href="#contact">contact</a>
+    </nav>
   </section>
 
-  <section class="p-6">
-    <h2 class="text-2xl text-green-300 mb-2"># skills</h2>
-    <ul class="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm text-gray-300">
-        <li>🖥 Linux</li>
-        <li>🔧 Scripting</li>
-        <li>☁️ AWS</li>
-        <li>⚙️ Backend</li>
-        <li>🌐 Frontend</li>
-        <li>📦 Docker</li>
-    </ul>
-  </section>
-
-<section class="p-6">
-    <h2 class="text-2xl text-green-300 mb-4"># projects</h2>
-    <div class="grid md:grid-cols-2 gap-4">
-      <div class="border border-gray-700 rounded-xl p-4 hover:bg-gray-800 transition">
-        <h3 class="text-xl text-green-200 mb-1">🗺️ mapEditor</h3>
-        <p class="text-sm text-gray-400">A Java project empowering users to paint and design blocks. <a class="text-green-400 underline" href="https://github.com/telmo-sousa/mapEditor">GitHub</a></p>
-      </div>
-  
-      <div class="border border-gray-700 rounded-xl p-4 hover:bg-gray-800 transition">
-        <h3 class="text-xl text-green-200 mb-1">🦇 Flappy Bat</h3>
-        <p class="text-sm text-gray-400">Collaborative Java game project built in 10 days. <a class="text-green-400 underline" href="https://technozombie.itch.io/flappy-bat-halloween">Play on Itch.io</a></p>
-      </div>
-  
-      <div class="border border-gray-700 rounded-xl p-4 hover:bg-gray-800 transition">
-        <h3 class="text-xl text-green-200 mb-1">🎤 Lady Gaga</h3>
-        <p class="text-sm text-gray-400">Website built during a 24-hour group hackathon. <a class="text-green-400 underline" href="https://cfaladygaga.github.io/">Visit Site</a></p>
-      </div>
-  
-      <div class="border border-gray-700 rounded-xl p-4 hover:bg-gray-800 transition">
-        <h3 class="text-xl text-green-200 mb-1">❓ myTrivia</h3>
-        <p class="text-sm text-gray-400">A trivia game with a point system using a free questions API. <a class="text-green-400 underline" href="https://github.com/Telmo-Sousa/myTrivia">GitHub</a></p>
-      </div>
-  
-      <div class="border border-gray-700 rounded-xl p-4 hover:bg-gray-800 transition">
-        <h3 class="text-xl text-green-200 mb-1">🎨 invert</h3>
-        <p class="text-sm text-gray-400">Rust-based tool to invert colors of images. <a class="text-green-400 underline" href="https://github.com/Telmo-Sousa/invert">GitHub</a></p>
-      </div>
-  
-      <div class="border border-gray-700 rounded-xl p-4 hover:bg-gray-800 transition">
-        <h3 class="text-xl text-green-200 mb-1">👾 invaders</h3>
-        <p class="text-sm text-gray-400">"Space Invaders" inspired game built in Rust. <a class="text-green-400 underline" href="https://github.com/Telmo-Sousa/invaders">GitHub</a></p>
-      </div>
-  
-      <div class="border border-gray-700 rounded-xl p-4 hover:bg-gray-800 transition">
-        <h3 class="text-xl text-green-200 mb-1">🛢️ rust_to_mysql</h3>
-        <p class="text-sm text-gray-400">Rust CLI app performing CRUD on MySQL. <a class="text-green-400 underline" href="https://github.com/Telmo-Sousa/rust_to_mysql">GitHub</a></p>
-      </div>
-  
-      <div class="border border-gray-700 rounded-xl p-4 hover:bg-gray-800 transition">
-        <h3 class="text-xl text-green-200 mb-1">🚀 rust_threads</h3>
-        <p class="text-sm text-gray-400">Multi-threaded web server in Rust. <a class="text-green-400 underline" href="https://github.com/Telmo-Sousa/rust_threads">GitHub</a></p>
-      </div>
-  
-      <div class="border border-gray-700 rounded-xl p-4 hover:bg-gray-800 transition">
-        <h3 class="text-xl text-green-200 mb-1">🎲 guessing_game</h3>
-        <p class="text-sm text-gray-400">Fun CLI game testing your intuition. <a class="text-green-400 underline" href="https://github.com/Telmo-Sousa/guessing_game">GitHub</a></p>
-      </div>
-  
-      <div class="border border-gray-700 rounded-xl p-4 hover:bg-gray-800 transition">
-        <h3 class="text-xl text-green-200 mb-1">📄 RusTeX</h3>
-        <p class="text-sm text-gray-400">Rust CLI to convert LaTeX files to PDF. <a class="text-green-400 underline" href="https://github.com/Telmo-Sousa/RusTeX">GitHub</a></p>
-      </div>
-  
-      <div class="border border-gray-700 rounded-xl p-4 hover:bg-gray-800 transition">
-        <h3 class="text-xl text-green-200 mb-1">📷 open_faces</h3>
-        <p class="text-sm text-gray-400">Real-time face detection in Rust using OpenCV. <a class="text-green-400 underline" href="https://github.com/Telmo-Sousa/open_faces">GitHub</a></p>
-      </div>
-  
-      <div class="border border-gray-700 rounded-xl p-4 hover:bg-gray-800 transition">
-        <h3 class="text-xl text-green-200 mb-1">🔫 bubble_shooter</h3>
-        <p class="text-sm text-gray-400">2D browser game where you shoot enemy bubbles. <a class="text-green-400 underline" href="https://tsousa.dev/bubble_shooter/">Play Now</a></p>
-      </div>
-  
-      <div class="border border-gray-700 rounded-xl p-4 hover:bg-gray-800 transition">
-        <h3 class="text-xl text-green-200 mb-1">📊 vis</h3>
-        <p class="text-sm text-gray-400">Sorting algorithm performance visualizer in Rust. <a class="text-green-400 underline" href="https://github.com/Telmo-Sousa/vis">GitHub</a></p>
-      </div>
+  <!-- ABOUT -->
+  <section class="block" id="about">
+    <p class="cmdline"><span class="prompt">telmo@viseu</span><span class="colon">:</span><span class="path">~</span><span class="dollar">$</span> cat about.txt</p>
+    <div class="comment-block">
+      <p><span class="c">//</span> Tech enthusiast with a focus on Unix systems, Rust development, and hands-on experimentation. I design scalable, automated setups and enjoy solving problems across web, game, and system layers.</p>
+      <p><span class="c">//</span> Based in Viseu — working globally.</p>
     </div>
   </section>
-  
-  <footer class="p-6 text-center text-sm text-gray-600 border-t border-gray-700">
-    <p>
-      <a href="https://github.com/Telmo-Sousa" class="text-green-400 hover:underline" target="_blank">GitHub</a> | 
-      <a href="telmo-sousa.pdf" download class="text-green-400 hover:underline">Download my CV</a> |
-      <a href="https://www.linkedin.com/in/telmo-sousa/" class="text-green-400 hover:underline" target="_blank">LinkedIn</a>
-    </p>
-  </footer>
+
+  <!-- SKILLS -->
+  <section class="block" id="skills">
+    <p class="cmdline"><span class="prompt">telmo@viseu</span><span class="colon">:</span><span class="path">~</span><span class="dollar">$</span> ls -la skills/</p>
+    <div class="listing" role="table" aria-label="Skills">
+      <div class="listing-row listing-head" role="row">
+        <span role="columnheader">perms</span>
+        <span role="columnheader">level</span>
+        <span role="columnheader">name</span>
+      </div>
+
+      <div class="listing-row" role="row"><span class="perms">-rwxr-xr-x</span><span class="bar" data-level="5" title="level 5"><i></i><i></i><i></i><i></i><i></i></span><span class="fname">linux</span></div>
+      <div class="listing-row" role="row"><span class="perms">-rwxr--r--</span><span class="bar" data-level="4" title="level 4"><i></i><i></i><i></i><i></i><i></i></span><span class="fname">scripting</span></div>
+      <div class="listing-row" role="row"><span class="perms">-r--r--r--</span><span class="bar" data-level="3" title="level 3"><i></i><i></i><i></i><i></i><i></i></span><span class="fname">aws</span></div>
+      <div class="listing-row" role="row"><span class="perms">-rwxr--r--</span><span class="bar" data-level="4" title="level 4"><i></i><i></i><i></i><i></i><i></i></span><span class="fname">backend</span></div>
+      <div class="listing-row" role="row"><span class="perms">-rwxr--r--</span><span class="bar" data-level="4" title="level 4"><i></i><i></i><i></i><i></i><i></i></span><span class="fname">frontend</span></div>
+      <div class="listing-row" role="row"><span class="perms">-r--r--r--</span><span class="bar" data-level="3" title="level 3"><i></i><i></i><i></i><i></i><i></i></span><span class="fname">docker</span></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="block" id="projects">
+    <p class="cmdline"><span class="prompt">telmo@viseu</span><span class="colon">:</span><span class="path">~</span><span class="dollar">$</span> ls -la projects/</p>
+    <p class="hint">click a row to expand · or run <code>cat &lt;name&gt;</code> below</p>
+
+    <div class="listing projects-listing" role="table" aria-label="Projects">
+      <div class="listing-row listing-head" role="row">
+        <span role="columnheader">ext</span>
+        <span role="columnheader">size</span>
+        <span role="columnheader">name</span>
+      </div>
+
+      <!-- each project row -->
+      <button class="proj-row" data-url="https://github.com/telmo-sousa/mapEditor">
+        <span class="ext ext-java">.java</span><span class="size">14K</span><span class="pname">mapEditor</span><span class="chev">▸</span>
+        <span class="pdesc">A Java project empowering users to paint and design blocks. <span class="link">→ GitHub</span></span>
+      </button>
+
+      <button class="proj-row" data-url="https://technozombie.itch.io/flappy-bat-halloween">
+        <span class="ext ext-java">.java</span><span class="size">9K</span><span class="pname">flappy_bat</span><span class="chev">▸</span>
+        <span class="pdesc">Collaborative Java game project built in 10 days. <span class="link">→ Play on Itch.io</span></span>
+      </button>
+
+      <button class="proj-row" data-url="https://cfaladygaga.github.io/">
+        <span class="ext ext-html">.html</span><span class="size">6K</span><span class="pname">lady_gaga</span><span class="chev">▸</span>
+        <span class="pdesc">Website built during a 24-hour group hackathon. <span class="link">→ Visit site</span></span>
+      </button>
+
+      <button class="proj-row" data-url="https://github.com/Telmo-Sousa/myTrivia">
+        <span class="ext ext-js">.js</span><span class="size">11K</span><span class="pname">myTrivia</span><span class="chev">▸</span>
+        <span class="pdesc">A trivia game with a point system, using a free questions API. <span class="link">→ GitHub</span></span>
+      </button>
+
+      <button class="proj-row" data-url="https://github.com/Telmo-Sousa/invert">
+        <span class="ext ext-rs">.rs</span><span class="size">4K</span><span class="pname">invert</span><span class="chev">▸</span>
+        <span class="pdesc">Rust-based tool to invert the colors of images. <span class="link">→ GitHub</span></span>
+      </button>
+
+      <button class="proj-row" data-url="https://github.com/Telmo-Sousa/invaders">
+        <span class="ext ext-rs">.rs</span><span class="size">18K</span><span class="pname">invaders</span><span class="chev">▸</span>
+        <span class="pdesc">"Space Invaders" inspired game, built in Rust. <span class="link">→ GitHub</span></span>
+      </button>
+
+      <button class="proj-row" data-url="https://github.com/Telmo-Sousa/rust_to_mysql">
+        <span class="ext ext-rs">.rs</span><span class="size">7K</span><span class="pname">rust_to_mysql</span><span class="chev">▸</span>
+        <span class="pdesc">Rust CLI app performing CRUD operations on MySQL. <span class="link">→ GitHub</span></span>
+      </button>
+
+      <button class="proj-row" data-url="https://github.com/Telmo-Sousa/rust_threads">
+        <span class="ext ext-rs">.rs</span><span class="size">5K</span><span class="pname">rust_threads</span><span class="chev">▸</span>
+        <span class="pdesc">A multi-threaded web server written in Rust. <span class="link">→ GitHub</span></span>
+      </button>
+
+      <button class="proj-row" data-url="https://github.com/Telmo-Sousa/guessing_game">
+        <span class="ext ext-rs">.rs</span><span class="size">2K</span><span class="pname">guessing_game</span><span class="chev">▸</span>
+        <span class="pdesc">A fun CLI game testing your intuition. <span class="link">→ GitHub</span></span>
+      </button>
+
+      <button class="proj-row" data-url="https://github.com/Telmo-Sousa/RusTeX">
+        <span class="ext ext-rs">.rs</span><span class="size">6K</span><span class="pname">RusTeX</span><span class="chev">▸</span>
+        <span class="pdesc">A Rust CLI tool to convert LaTeX files to PDF. <span class="link">→ GitHub</span></span>
+      </button>
+
+      <button class="proj-row" data-url="https://github.com/Telmo-Sousa/open_faces">
+        <span class="ext ext-rs">.rs</span><span class="size">10K</span><span class="pname">open_faces</span><span class="chev">▸</span>
+        <span class="pdesc">Real-time face detection in Rust using OpenCV. <span class="link">→ GitHub</span></span>
+      </button>
+
+      <button class="proj-row" data-url="https://tsousa.dev/bubble_shooter/">
+        <span class="ext ext-js">.js</span><span class="size">8K</span><span class="pname">bubble_shooter</span><span class="chev">▸</span>
+        <span class="pdesc">A 2D browser game where you shoot enemy bubbles. <span class="link">→ Play now</span></span>
+      </button>
+
+      <button class="proj-row" data-url="https://github.com/Telmo-Sousa/vis">
+        <span class="ext ext-rs">.rs</span><span class="size">13K</span><span class="pname">vis</span><span class="chev">▸</span>
+        <span class="pdesc">A sorting algorithm performance visualizer, built in Rust. <span class="link">→ GitHub</span></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="block" id="contact">
+    <p class="cmdline"><span class="prompt">telmo@viseu</span><span class="colon">:</span><span class="path">~</span><span class="dollar">$</span> cat contact.txt</p>
+    <div class="comment-block contact-links">
+      <p><a href="https://github.com/Telmo-Sousa" target="_blank" rel="noopener">github.com/Telmo-Sousa</a></p>
+      <p><a href="https://tsousa.dev/telmo-sousa.pdf" target="_blank" rel="noopener">download my CV (pdf)</a></p>
+      <p><a href="https://www.linkedin.com/in/telmo-sousa/" target="_blank" rel="noopener">linkedin.com/in/telmo-sousa</a></p>
+    </div>
+  </section>
+
+  <!-- LIVE CONSOLE -->
+  <section class="block console-block" id="console" aria-label="Interactive terminal">
+    <p class="cmdline"><span class="prompt">telmo@viseu</span><span class="colon">:</span><span class="path">~</span><span class="dollar">$</span> <span class="hint-inline">type <code>help</code> to see what this does</span></p>
+    <div id="consoleOutput" class="console-output" aria-live="polite"></div>
+    <form id="consoleForm" class="console-input-line" autocomplete="off">
+      <span class="prompt">telmo@viseu</span><span class="colon">:</span><span class="path">~</span><span class="dollar">$</span>
+      <input id="cmdInput" type="text" aria-label="Terminal command input" spellcheck="false" autocomplete="off">
+      <span class="cursor" aria-hidden="true"></span>
+    </form>
+  </section>
+
+</main>
+
+<footer class="term-footer">
+  <p>© <span id="year"></span> telmo_sousa</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
