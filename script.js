@@ -32,11 +32,25 @@
   const projectRows = document.querySelectorAll('.proj-row');
   projectRows.forEach(row => {
     row.setAttribute('aria-expanded', 'false');
+
     row.addEventListener('click', (e) => {
+      // let the real "→ GitHub" link inside the row navigate normally,
+      // without also toggling (or re-closing) the accordion
+      if (e.target.closest('a.link')) return;
+
       const isOpen = row.getAttribute('aria-expanded') === 'true';
       // close others for a tidy single-open listing
       projectRows.forEach(r => r.setAttribute('aria-expanded', 'false'));
       row.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+    });
+
+    // rows are divs (not buttons) so they need explicit keyboard handling
+    row.addEventListener('keydown', (e) => {
+      if (e.target.closest('a.link')) return;
+      if (e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        row.click();
+      }
     });
   });
 

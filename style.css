@@ -276,6 +276,7 @@ code{
 .projects-listing{ display: block; }
 .proj-row{
   all: unset;
+  box-sizing: border-box;
   cursor: pointer;
   display: grid;
   grid-template-columns: 70px 60px 1fr auto;
@@ -318,7 +319,7 @@ code{
   color: var(--text-dim);
   font-size: 0.85rem;
   text-align: left;
-  padding: 0.5rem 0 0.15rem;
+  padding: 0.5rem 0.75rem 0.15rem 0;
   line-height: 1.6;
   overflow-wrap: anywhere;
 }
@@ -394,6 +395,7 @@ code{
   .listing-head span:nth-child(2){ display: none; }
   .proj-row{ grid-template-columns: 55px 1fr auto; }
   .proj-row .size{ display: none; }
+  .pdesc{ padding-right: 1rem; }
   .projects-listing .listing-head{ grid-template-columns: 55px 1fr auto; }
   .projects-listing .listing-head span:nth-child(2){ display: none; }
   .quicknav{ flex-wrap: wrap; gap: 1rem 1.2rem; }
